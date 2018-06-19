@@ -1,0 +1,23 @@
+		O
+		A
+	B		C
+		D
+
+L[O] = O
+L[A] = A + L[O] = AO
+
+L[B] = B + L[A] = BAO
+
+L[C] = C + L[A] = CAO
+
+L[D] = D + merge(L[B] ,L[C] , BC)
+
+L[D] = D + merge(BAO,CAO,BC)
+
+L[D] = D +B+ merge(AO,CAO,C)
+
+L[D] = D +B+ C+ merge(AO,AO)
+
+L[D] = D +B+ C+ AO
+
+L[D] = DBCAO
